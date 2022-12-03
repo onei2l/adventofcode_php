@@ -9,7 +9,7 @@ foreach ($lines as $line) {
 	$line_split_array = mb_str_split($line, strlen($line) / 2);
 
 	foreach (mb_str_split($line_split_array[0]) as $character) {
-		if(strrpos($line_split_array[1], $character) !== false) {
+		if(str_contains($line_split_array[1], $character)) {
 			$result += array_search($character, $alphabet) + 1;
 
 			break;
