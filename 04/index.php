@@ -20,10 +20,10 @@ foreach ($lines as $line) {
 
 	// B
 
-	$arf = range($first_section_first_number, $first_section_second_number);
-	$ass = range($second_section_first_number, $second_section_second_number);
-
-	if (array_intersect($arf, $ass)) {
+	if (array_intersect(
+			range($first_section_first_number, $first_section_second_number),
+			range($second_section_first_number, $second_section_second_number))
+	) {
 		$overlap_total++;
 	}
 }
