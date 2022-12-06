@@ -4,8 +4,6 @@ $string = file_get_contents('input.txt');
 
 $string_length = strlen($string);
 
-$sequence_length = 14;
-
 function getStartPacket(string $String, int $StringLength, int $SequenceLength): int
 {
 	for ($i = 0; $i <= $StringLength; $i++) {
